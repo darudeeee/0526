@@ -19,7 +19,7 @@ function CalendarAdmin() {
   const addEvent = () => {
     const dateKey = selectedDate.toDateString();
     if (eventText.trim() === "") return;
-
+  
     setEvents((prevEvents) => {
       const newEvents = { ...prevEvents };
       if (!newEvents[dateKey]) {
@@ -28,7 +28,7 @@ function CalendarAdmin() {
       newEvents[dateKey].push(eventText);
       return newEvents;
     });
-
+  
     setEventText("");
   };
 
@@ -44,7 +44,7 @@ function CalendarAdmin() {
   };
 
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", textAlign: "center" }}>
       <h1>Event Calendar</h1>
       <Calendar
         onChange={handleDateChange}
