@@ -74,16 +74,28 @@ function RollCheck() {
       >
         <tbody>
           <tr style={{ width: "600px", height: "50px", fontSize: "22pt" }}>
-            <td style={{ width: "200px", border: "1px solid black" }}>현재 시간:</td>
-            <td style={{ width: "200px", border: "1px solid black" }}>{currentTime}</td>
+            <td style={{ width: "200px", border: "1px solid black" }}>
+              현재 시간:
+            </td>
+            <td style={{ width: "200px", border: "1px solid black" }}>
+              {currentTime}
+            </td>
           </tr>
           <tr style={{ width: "600px", height: "50px", fontSize: "22pt" }}>
-            <td style={{ width: "200px", border: "1px solid black" }}>등원 시간:</td>
-            <td style={{width: "200px",  border: "1px solid black" }}>{arrivalTime}</td>
+            <td style={{ width: "200px", border: "1px solid black" }}>
+              등원 시간:
+            </td>
+            <td style={{ width: "200px", border: "1px solid black" }}>
+              {arrivalTime}
+            </td>
           </tr>
           <tr style={{ width: "600px", height: "50px", fontSize: "22pt" }}>
-            <td style={{ width: "200px", border: "1px solid black" }}>하원 시간:</td>
-            <td style={{ width: "200px", border: "1px solid black" }}>{departureTime}</td>
+            <td style={{ width: "200px", border: "1px solid black" }}>
+              하원 시간:
+            </td>
+            <td style={{ width: "200px", border: "1px solid black" }}>
+              {departureTime}
+            </td>
           </tr>
           <tr style={{ width: "600px", height: "50px", fontSize: "22pt" }}>
             <td style={{ width: "200px", border: "1px solid black" }}>
@@ -91,7 +103,6 @@ function RollCheck() {
                 style={{
                   backgroundColor: "#beb4f5",
                   width: "100px",
-
                 }}
                 onClick={handleArrival}
                 disabled={arrivalButtonDisabled}

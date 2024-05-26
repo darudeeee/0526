@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./stylesheet/Main.css";
 
 function Main() {
@@ -10,14 +10,14 @@ function Main() {
         <div id="top">
           <div id="category">
             <ol id="category-list">
-            <li>
-              <Link to="/rollcheck">출석 체크</Link>
+              <li>
+                <Link to="/rollcheck">출석 체크</Link>
               </li>
               <li>
-              <Link to="/">캘린더</Link>
+                <Link to="/">캘린더</Link>
               </li>
               <li>
-              <Link to="/">자습실 예약</Link>
+                <Link to="/">자습실 예약</Link>
               </li>
             </ol>
           </div>
