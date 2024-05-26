@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
+import HomeIcon from "@mui/icons-material/Home";
+import ReplyIcon from "@mui/icons-material/Reply";
 import './stylesheet/CalendarAdmin.css';
 
 function CalendarAdmin() {
@@ -44,13 +47,35 @@ function CalendarAdmin() {
   };
 
   return (
-    <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", textAlign: "center" }}>
+    <div className="calendar-admin-container">
+      <div className="navigation-icons">
+        <Link to="/mainadmin">
+          <ReplyIcon className="icon" 
+          sx={{
+              fontSize: 40,
+              color: "#beb4f5",
+              "&:hover": {
+                color: "black",
+              },
+            }}/>
+        </Link>
+        <Link to="/mainadmin">
+          <HomeIcon className="icon" 
+          sx={{
+            fontSize: 40,
+            color: "#beb4f5",
+            "&:hover": {
+              color: "black",
+            },
+          }}/>
+        </Link>
+      </div>
       <h1>Event Calendar</h1>
       <Calendar
         onChange={handleDateChange}
         value={selectedDate}
       />
-      <div>
+      <div className="event-input">
         <h2>Selected Date: {selectedDate.toDateString()}</h2>
         <input
           type="text"
@@ -58,11 +83,11 @@ function CalendarAdmin() {
           onChange={handleEventTextChange}
           placeholder="Add Event"
         />
-        <button onClick={addEvent}>Add Event</button>
+        <button onClick={addEvent} className="add-event-button">Add Event</button>
       </div>
-      <div>
+      <div className="events-container">
         <h3>Events:</h3>
-        <ul>
+        <ul className="event-list">
           {events[selectedDate.toDateString()]?.map((event, index) => (
             <li key={index}>
               {event} <button onClick={() => deleteEvent(selectedDate.toDateString(), index)}>Delete</button>

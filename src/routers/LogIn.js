@@ -97,7 +97,7 @@ function LogIn() {
           height: "400px",
           width: "500px",
           border: "3px solid black",
-          backgroundColor: "ffecfc",
+          backgroundColor: "#ffecfc",
         }}
       >
         <div style={{ display: "flex", height: "100px" }}>

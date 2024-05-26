@@ -1,21 +1,63 @@
-/* EventCalendar.css */
-.calendar-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .event-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .event-list li {
-    margin: 5px 0;
-  }
-  
-  .event-list button {
-    margin-left: 10px;
-  }
-  
+.calendar-admin-container {
+  background-color: #ffecfc;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.navigation-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.icon {
+  font-size: 40px;
+  color: #beb4f5;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: black;
+}
+
+.event-input {
+  margin-top: 20px;
+}
+
+.add-event-button {
+  background-color: #beb4f5;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-event-button:hover {
+  background-color: #a79dd4;
+}
+
+.events-container {
+  margin-top: 20px;
+}
+
+.event-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-list li {
+  margin: 5px 0;
+}
+
+.event-list button {
+  margin-left: 10px;
+  cursor: pointer;
+}
