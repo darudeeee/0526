@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import SendIcon from "@mui/icons-material/Send";
+import HomeIcon from "@mui/icons-material/Home";
 import "./stylesheet/SignUp.css";
 
 function SignUp() {
@@ -31,7 +33,7 @@ function SignUp() {
     } else {
       if (user.pw === user.pwCheck) {
         alert("회원가입이 완료되었습니다.");
-        window.location.href = "/";
+        window.location.href = "/mainuser";
       } else {
         alert("비밀번호가 일치하지 않습니다.");
       }
@@ -43,12 +45,26 @@ function SignUp() {
       id="back"
       style={{
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
         width: "100vw",
       }}
     >
+      <div style={{ display: "flex" }}>
+        <Link to="/">
+          <HomeIcon
+            sx={{
+              fontSize: 40,
+              color: "#beb4f5",
+              "&:hover": {
+                color: "black",
+              },
+            }}
+          />
+        </Link>
+      </div>
       <div // 회원가입 폼 테두리
         id="cover"
         style={{
@@ -197,17 +213,15 @@ function SignUp() {
             marginTop: "40px",
           }}
         >
-
-            <Button
-              variant="contained"
-              endIcon={<SendIcon />}
-              size="large"
-              style={{ backgroundColor: "#beb4f5" }}
-              onClick={submit}
-            >
-              회원가입
-            </Button>
-
+          <Button
+            variant="contained"
+            endIcon={<SendIcon />}
+            size="large"
+            style={{ backgroundColor: "#beb4f5" }}
+            onClick={submit}
+          >
+            회원가입
+          </Button>
         </div>
       </div>
     </div>
