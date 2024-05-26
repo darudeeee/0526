@@ -1,0 +1,21 @@
+/* EventCalendar.css */
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .event-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .event-list li {
+    margin: 5px 0;
+  }
+  
+  .event-list button {
+    margin-left: 10px;
+  }
+  

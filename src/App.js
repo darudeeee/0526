@@ -10,6 +10,7 @@ import MyInfo from "./routers/MyInfo";
 import Editor from "./routers/Editor";
 import RollCheck from "./routers/RollCheck"
 import RollCheckManage from "./routers/RollCheckManage"
+import CalendarAdmin from "./routers/CalendarAdmin"
 
 
 
@@ -27,6 +28,7 @@ function App() {
       <Route path="/editor" element={<Editor />} />
       <Route path="/rollCheck" element={<RollCheck />} />
       <Route path="/rollCheckManage" element={<RollCheckManage />} />
+      <Route path="/calendarAdmin" element={<CalendarAdmin />} />
     </Routes>
   </Router>
   );
