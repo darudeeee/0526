@@ -12,9 +12,8 @@ import RollCheck from "./routers/RollCheck";
 import RollCheckManage from "./routers/RollCheckManage";
 import CalendarAdmin from "./routers/CalendarAdmin";
 import CalendarUser from "./routers/CalendarUser";
-
-
-
+import RoomApproved from "./routers/RoomApproved";
+import RoomReservation from "./routers/RoomReservation";
 
 function App() {
   return (
@@ -32,6 +31,8 @@ function App() {
       <Route path="/rollCheckManage" element={<RollCheckManage />} />
       <Route path="/calendarAdmin" element={<CalendarAdmin />} />
       <Route path="/calendaruser" element={<CalendarUser />} />
+      <Route path="/roomapproved" element={<RoomApproved />} />
+      <Route path="/roomreservation" element={<RoomReservation />} />
     </Routes>
   </Router>
   );
