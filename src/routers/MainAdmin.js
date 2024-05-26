@@ -11,7 +11,7 @@ function MainAdmin() {
           <div id="category">
             <ol id="category-list">
             <li>
-              <Link to="/">출석 현황</Link>
+              <Link to="/rollCheckManage">출석 현황</Link>
               </li>
               <li>
               <Link to="/">캘린더</Link>

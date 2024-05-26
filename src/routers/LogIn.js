@@ -7,7 +7,6 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import SendIcon from "@mui/icons-material/Send";
 import HomeIcon from "@mui/icons-material/Home";
-import "./stylesheet/LogIn.css";
 
 function LogIn() {
   const [user, setUser] = React.useState({

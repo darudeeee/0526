@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+import HomeIcon from "@mui/icons-material/Home";
+import ReplyIcon from '@mui/icons-material/Reply';
 import "./stylesheet/UserInfo.css";
 
 function UserInfo() {
@@ -27,7 +30,31 @@ function UserInfo() {
   };
 
   return (
-    <div className="user-info-container">
+    <div className="user-info-container" style={{backgroundColor: "#fff9ff"}}>
+      <div style={{ display: "flex" , justifyContent: "center", alignItems: "center", width: "100%", height: "50px"}}>
+      <Link to="/mainadmin">
+          <ReplyIcon
+            sx={{
+              fontSize: 40,
+              color: "#beb4f5",
+              "&:hover": {
+                color: "black",
+              },
+            }}
+          />
+        </Link>
+        <Link to="/mainadmin">
+          <HomeIcon
+            sx={{
+              fontSize: 40,
+              color: "#beb4f5",
+              "&:hover": {
+                color: "black",
+              },
+            }}
+          />
+        </Link>
+      </div>
       <div className="title">
         <h2>학생정보 조회</h2>
       </div>
@@ -51,9 +78,9 @@ function UserInfo() {
                 <td><input type="text" value={u.id} placeholder={message ? u.id : ''} onChange={(e) => handleInputChange(index, 'id', e.target.value)} /></td>
                 <td><input type="text" value={u.pw} placeholder={message ? u.pw : ''} onChange={(e) => handleInputChange(index, 'pw', e.target.value)} /></td>
                 <td>
-                  <button className="edit-button" onClick={() => handleEditClick()}>수정</button>
+                  <button className="edit-button" onClick={() => handleEditClick()} >수정</button>
                 </td>
-                <td><button className="delete-button" onClick={() => DeleteUser(u.key)}>삭제</button></td>
+                <td><button className="delete-button" onClick={() => DeleteUser(u.key)} >삭제</button></td>
               </tr>
             ))}
           </tbody>
