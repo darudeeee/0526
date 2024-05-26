@@ -1,0 +1,132 @@
+#container {
+    max-width: 1900px;
+    min-width: 600px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#top {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    background-color: #e6e6fa;
+}
+
+#category,
+#user {
+    display: flex;
+    align-items: center;
+}
+
+#user {
+    margin-right: 40px;
+}
+
+#category-list,
+#user-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#category-list li {
+    height: 30px;
+    width: 150px;
+    text-align: center;
+}
+
+#user-list li {
+    height: 30px;
+    width: 80px;
+    text-align: center;
+}
+
+#category-list li a {
+    font-size: 18pt;
+    color: #ffffff;
+}
+
+#user-list li a {
+    font-size: 13pt;
+    color: #ffffff;
+}
+
+#category-list li:hover a {
+    font-size: 20pt;
+    color: #7b68ee;
+}
+
+#user-list li:hover a {
+    font-size: 15pt;
+    color: #7b68ee;
+}
+
+a {
+    text-decoration: none;
+}
+
+#middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1900px;
+    height: 920px;
+    width: 100%;
+    background-color: #f8f8ff;
+    background-image: url('./img/back.png');
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    #middle {
+        background-image: url('./img/back.png');
+    }
+}
+
+@media (min-width: 769px) {
+    #middle {
+        background-image: url('./img/back.png');
+    }
+}
+
+#acaBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    font-size: 60pt;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%; /* 이 부분을 추가합니다. */
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#acaBox:hover {
+    transform: scale(1.6);
+    transition: transform 0.4s ease;
+}
+
+#bottom {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    background-color: #e6e6fa;
+}
+
+#inquiryBox {
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 800px;
+    color: #fff;
+    font-size: 13pt;
+    text-align: center;
+}

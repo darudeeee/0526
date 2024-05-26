@@ -1,0 +1,33 @@
+.myinfo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.title {
+  width: 700px;
+  height: 70px;
+}
+
+.my-table {
+  border: 3px solid black;
+  width: 700px;
+  height: 500px;
+}
+
+.my-table td {
+  width: 300px;
+  text-align: right; /* 이름, 핸드폰번호, 아이디, 비밀번호 우측 정렬 */
+  font-size: 22pt;
+}
+
+.my-table td:nth-child(2) {
+  text-align: left; /* 각 정보 좌측 정렬 */
+}
+
+.button-container button {
+  font-size: 18pt;
+}
