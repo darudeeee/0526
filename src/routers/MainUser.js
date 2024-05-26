@@ -11,7 +11,7 @@ function Main() {
           <div id="category">
             <ol id="category-list">
             <li>
-              <Link to="/">출석 체크</Link>
+              <Link to="/rollcheck">출석 체크</Link>
               </li>
               <li>
               <Link to="/">캘린더</Link>

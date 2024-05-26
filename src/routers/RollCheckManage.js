@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
-import ReplyIcon from '@mui/icons-material/Reply';
-import './stylesheet/RollCheckManage.css'; // 외부 CSS 파일을 import
+import ReplyIcon from "@mui/icons-material/Reply";
+import "./stylesheet/RollCheckManage.css"; // 외부 CSS 파일을 import
 
 function RollCheckManage() {
   const [attendanceData, setAttendanceData] = useState([]);
@@ -13,13 +13,13 @@ function RollCheckManage() {
     const fetchData = async () => {
       try {
         // API 호출 및 데이터 가져오기
-        const response = await fetch('API_ENDPOINT');
+        const response = await fetch("API_ENDPOINT");
         const data = await response.json();
         // 당일 데이터만 필터링하여 상태 업데이트
-        const todayData = data.filter(entry => isToday(new Date(entry.date)));
+        const todayData = data.filter((entry) => isToday(new Date(entry.date)));
         setAttendanceData(todayData);
       } catch (error) {
-        console.error('Error fetching data: ', error);
+        console.error("Error fetching data: ", error);
       }
     };
 
@@ -28,15 +28,15 @@ function RollCheckManage() {
 
   // 임의의 사용자 데이터
   const user1 = {
-    name: 'user1',
-    attendanceTime: '08:22:22',
-    departureTime: '18:01:33',
+    name: "user1",
+    attendanceTime: "08:22:22",
+    departureTime: "18:01:33",
   };
 
   const user2 = {
-    name: 'user2',
-    attendanceTime: '08:58:02',
-    departureTime: '', // 하원 시간은 비어 있음
+    name: "user2",
+    attendanceTime: "08:58:02",
+    departureTime: "", // 하원 시간은 비어 있음
   };
 
   // 임의의 사용자 데이터를 기존 데이터와 병합
@@ -45,15 +45,30 @@ function RollCheckManage() {
   // 날짜가 오늘인지 확인하는 함수
   const isToday = (someDate) => {
     const today = new Date();
-    return someDate.getDate() === today.getDate() &&
+    return (
+      someDate.getDate() === today.getDate() &&
       someDate.getMonth() === today.getMonth() &&
-      someDate.getFullYear() === today.getFullYear();
+      someDate.getFullYear() === today.getFullYear()
+    );
   };
 
   return (
-    <div className="roll-check-container" style={{backgroundColor: "#fff9ff", width: "100vw", height: "100vh"}} > {/* CSS 클래스를 추가 */}
-        <div style={{ display: "flex" , justifyContent: "center", alignItems: "center", width: "100%", height: "100px"}}>
-      <Link to="/mainadmin">
+    <div
+      className="roll-check-container"
+      style={{ backgroundColor: "#fff9ff", width: "100vw", height: "100vh" }}
+    >
+      {" "}
+      {/* CSS 클래스를 추가 */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "100px",
+        }}
+      >
+        <Link to="/mainadmin">
           <ReplyIcon
             sx={{
               fontSize: 40,
@@ -76,24 +91,42 @@ function RollCheckManage() {
           />
         </Link>
       </div>
-        <table className="attendance-table" style={{display:"flex", justifyContent: "center"}}> {/* CSS 클래스를 추가 */}
-          <tbody style={{ border: "3px solid black"}}>
-            <tr style={{width: "600px", height:"50px", fontSize: "22pt"}}>
-              <td style={{width: "200px", border: "1px solid black"}}>이름</td>
-              <td style={{width: "200px", border: "1px solid black"}}>등원 시간</td>
-              <td style={{width: "200px", border: "1px solid black"}}>하원 시간</td>
+      <table
+        className="attendance-table"
+        style={{ display: "flex", justifyContent: "center" }}
+      >
+        {" "}
+        {/* CSS 클래스를 추가 */}
+        <tbody>
+          <tr style={{ width: "600px", height: "50px", fontSize: "22pt" }}>
+            <td style={{ width: "200px", border: "1px solid black" }}>이름</td>
+            <td style={{ width: "200px", border: "1px solid black" }}>
+              등원 시간
+            </td>
+            <td style={{ width: "200px", border: "1px solid black" }}>
+              하원 시간
+            </td>
+          </tr>
+          {/* updatedAttendanceData를 기준으로 테이블 행을 생성합니다. */}
+          {updatedAttendanceData.map((user, index) => (
+            <tr
+              key={index}
+              style={{ width: "600px", height: "50px", fontSize: "22pt" }}
+            >
+              <td style={{ width: "200px", border: "1px solid black" }}>
+                {user.name}
+              </td>
+              <td style={{ width: "200px", border: "1px solid black" }}>
+                {user.attendanceTime}
+              </td>
+              {/* 하원 시간이 없는 경우 미등록을 출력합니다. */}
+              <td style={{ border: "1px solid black" }}>
+                {user.departureTime || "미등록"}
+              </td>
             </tr>
-            {/* updatedAttendanceData를 기준으로 테이블 행을 생성합니다. */}
-            {updatedAttendanceData.map((user, index) => (
-              <tr key={index} style={{width: "600px", height:"50px", fontSize: "22pt"}}>
-                <td style={{width: "200px", border: "1px solid black"}}>{user.name}</td>
-                <td style={{width: "200px", border: "1px solid black"}}>{user.attendanceTime}</td>
-                {/* 하원 시간이 없는 경우 미등록을 출력합니다. */}
-                <td style={{border: "1px solid black"}}>{user.departureTime || '미등록'}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
