@@ -8,9 +8,11 @@ import MainUser from "./routers/MainUser";
 import UserInfo from "./routers/UserInfo";
 import MyInfo from "./routers/MyInfo";
 import Editor from "./routers/Editor";
-import RollCheck from "./routers/RollCheck"
-import RollCheckManage from "./routers/RollCheckManage"
-import CalendarAdmin from "./routers/CalendarAdmin"
+import RollCheck from "./routers/RollCheck";
+import RollCheckManage from "./routers/RollCheckManage";
+import CalendarAdmin from "./routers/CalendarAdmin";
+import CalendarUser from "./routers/CalendarUser";
+
 
 
 
@@ -29,6 +31,7 @@ function App() {
       <Route path="/rollCheck" element={<RollCheck />} />
       <Route path="/rollCheckManage" element={<RollCheckManage />} />
       <Route path="/calendarAdmin" element={<CalendarAdmin />} />
+      <Route path="/calendaruser" element={<CalendarUser />} />
     </Routes>
   </Router>
   );

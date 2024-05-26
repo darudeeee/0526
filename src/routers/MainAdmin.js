@@ -14,7 +14,7 @@ function MainAdmin() {
                 <Link to="/rollCheckManage">출석 현황</Link>
               </li>
               <li>
-                <Link to="/">캘린더</Link>
+                <Link to="/calendaradmin">캘린더</Link>
               </li>
               <li>
                 <Link to="/">자습실 결재</Link>

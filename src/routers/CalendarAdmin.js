@@ -4,7 +4,7 @@ import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
 import HomeIcon from "@mui/icons-material/Home";
 import ReplyIcon from "@mui/icons-material/Reply";
-import './stylesheet/CalendarAdmin.css';
+import './stylesheet/Calendar.css';
 
 function CalendarAdmin() {
   const [selectedDate, setSelectedDate] = useState(new Date());

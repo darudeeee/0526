@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import ReplyIcon from "@mui/icons-material/Reply";
-import "./stylesheet/RollCheckManage.css"; // 외부 CSS 파일을 import
 
 function RollCheckManage() {
   const [attendanceData, setAttendanceData] = useState([]);
@@ -93,19 +92,15 @@ function RollCheckManage() {
       </div>
       <table
         className="attendance-table"
-        style={{ display: "flex", justifyContent: "center" }}
+        style={{ display: "flex", justifyContent: "center", borderCollapse: "collapse" }}
       >
         {" "}
         {/* CSS 클래스를 추가 */}
         <tbody>
           <tr style={{ width: "600px", height: "50px", fontSize: "22pt" }}>
             <td style={{ width: "200px", border: "1px solid black" }}>이름</td>
-            <td style={{ width: "200px", border: "1px solid black" }}>
-              등원 시간
-            </td>
-            <td style={{ width: "200px", border: "1px solid black" }}>
-              하원 시간
-            </td>
+            <td style={{ width: "200px", border: "1px solid black" }}>등원 시간</td>
+            <td style={{ width: "200px", border: "1px solid black" }}>하원 시간</td>
           </tr>
           {/* updatedAttendanceData를 기준으로 테이블 행을 생성합니다. */}
           {updatedAttendanceData.map((user, index) => (
@@ -113,16 +108,10 @@ function RollCheckManage() {
               key={index}
               style={{ width: "600px", height: "50px", fontSize: "22pt" }}
             >
-              <td style={{ width: "200px", border: "1px solid black" }}>
-                {user.name}
-              </td>
-              <td style={{ width: "200px", border: "1px solid black" }}>
-                {user.attendanceTime}
-              </td>
+              <td style={{ width: "200px", border: "1px solid black" }}>{user.name}</td>
+              <td style={{ width: "200px", border: "1px solid black" }}>{user.attendanceTime}</td>
               {/* 하원 시간이 없는 경우 미등록을 출력합니다. */}
-              <td style={{ border: "1px solid black" }}>
-                {user.departureTime || "미등록"}
-              </td>
+              <td style={{ border: "1px solid black" }}>{user.departureTime || "미등록"}</td>
             </tr>
           ))}
         </tbody>

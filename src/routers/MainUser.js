@@ -14,7 +14,7 @@ function Main() {
                 <Link to="/rollcheck">출석 체크</Link>
               </li>
               <li>
-                <Link to="/">캘린더</Link>
+                <Link to="/calendaruser">캘린더</Link>
               </li>
               <li>
                 <Link to="/">자습실 예약</Link>
