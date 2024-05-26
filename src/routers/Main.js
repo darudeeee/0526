@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import "./stylesheet/Main.css";
 
 function Main() {
+
+  const Log = () => {
+    alert("로그인 후 이용하세요.");
+  };
+  
   return (
     <div id="container">
       {/* Header */}
@@ -10,13 +15,13 @@ function Main() {
         <div id="top">
           <div id="category">
             <ol id="category-list">
-              <li>
+              <li onClick={Log}>
               <Link to="/">출석 체크</Link>
               </li>
-              <li>
+              <li onClick={Log}>
               <Link to="/">캘린더</Link>
               </li>
-              <li>
+              <li onClick={Log}>
               <Link to="/">자습실 예약</Link>
               </li>
             </ol>
@@ -33,7 +38,7 @@ function Main() {
           </div>
         </div>
       </header>
-      {/* Main Content */}
+
       <main>
         <div id="middle">
           <div id="acaBox">
@@ -45,7 +50,7 @@ function Main() {
           </div>
         </div>
       </main>
-      {/* Footer */}
+
       <footer>
         <div id="bottom">
           <div id="inquiryBox">

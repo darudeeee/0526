@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import SendIcon from "@mui/icons-material/Send";
+import HomeIcon from '@mui/icons-material/Home';
 import "./stylesheet/LogIn.css";
 
 function LogIn() {
@@ -30,15 +31,13 @@ function LogIn() {
 
     if (id === 'admin' && pw === '1234') {
       alert("관리자로 로그인 성공!");
-      <Link to="/mianadmin">로그인</Link>
-      // 관리자 메인 페이지
+      window.location.href = "/mainadmin";
     } else if (id === validId && pw === validPw) {
       alert(id + "님 로그인 성공!");
-      <Link to="/mainuser">로그인</Link>
-      // 유저 메인 페이지
+      window.location.href = "/mainuser";
     } else {
       alert("유효하지 않은 아이디입니다.");
-      // 로그인 페이지
+      window.location.href = "/login";
     }
   };
 
@@ -47,6 +46,7 @@ function LogIn() {
       id="back"
       style={{
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         maxWidth: "1900px",
@@ -55,6 +55,12 @@ function LogIn() {
         width: "100vw",
       }}
     >
+      <div style={{display:"flex"}}>
+        <Link to="/"><HomeIcon sx={{ fontSize: 40, color: '#beb4f5',
+          '&:hover': {
+            color: 'black', 
+          }, }} /></Link>
+      </div>
       <div
         id="cover"
         style={{
