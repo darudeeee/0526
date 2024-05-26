@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
-// import HomeIcon from "@mui/icons-material/Home";
-// import ReplyIcon from "@mui/icons-material/Reply";
+import { Link } from "react-router-dom";
+import HomeIcon from "@mui/icons-material/Home";
+import ReplyIcon from "@mui/icons-material/Reply";
 import "./stylesheet/Editor.css";
 
 function Editor() {
@@ -49,21 +49,21 @@ function Editor() {
     );
     setUser(updatedUser);
     alert("수정되었습니다.");
-    // 내정보로 돌아가는 로직
+    window.location.href = "/myinfo";
   };
 
   return (
     <div className="editor-container">
-      {/* <div
+      <div
         style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
-          height: "100px",
+          height: "50px",
         }}
       >
-        <Link to="/mainadmin">
+        <Link to="/myinfo">
           <ReplyIcon
             sx={{
               fontSize: 40,
@@ -74,7 +74,7 @@ function Editor() {
             }}
           />
         </Link>
-        <Link to="/mainadmin">
+        <Link to="/mainuser">
           <HomeIcon
             sx={{
               fontSize: 40,
@@ -85,7 +85,7 @@ function Editor() {
             }}
           />
         </Link>
-      </div> */}
+      </div>
       <div className="title">
         <h2>정보 조회</h2>
       </div>

@@ -7,6 +7,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import SendIcon from "@mui/icons-material/Send";
 import HomeIcon from "@mui/icons-material/Home";
+import ReplyIcon from "@mui/icons-material/Reply";
 
 function LogIn() {
   const [user, setUser] = React.useState({
@@ -54,7 +55,26 @@ function LogIn() {
         width: "100vw",
       }}
     >
-      <div style={{ display: "flex" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "50px",
+        }}
+      >
+        <Link to="/">
+          <ReplyIcon
+            sx={{
+              fontSize: 40,
+              color: "#beb4f5",
+              "&:hover": {
+                color: "black",
+              },
+            }}
+          />
+        </Link>
         <Link to="/">
           <HomeIcon
             sx={{

@@ -1,13 +1,12 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./stylesheet/Main.css";
 
 function Main() {
-
   const Log = () => {
     alert("로그인 후 이용하세요.");
   };
-  
+
   return (
     <div id="container">
       {/* Header */}
@@ -16,13 +15,13 @@ function Main() {
           <div id="category">
             <ol id="category-list">
               <li onClick={Log}>
-              <Link to="/">출석 체크</Link>
+                <Link to="/">출석 체크</Link>
               </li>
               <li onClick={Log}>
-              <Link to="/">캘린더</Link>
+                <Link to="/">캘린더</Link>
               </li>
               <li onClick={Log}>
-              <Link to="/">자습실 예약</Link>
+                <Link to="/">자습실 예약</Link>
               </li>
             </ol>
           </div>

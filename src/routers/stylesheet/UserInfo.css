@@ -1,37 +1,39 @@
 .user-info-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-  }
-  
-  .title {
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
 
-  .table-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  table > thead {
-    background-color: #beb4f5;
-  }
-  .user-table {
-    border-collapse: collapse;
-  }
-  
-  .user-table th,
-  .user-table td {
-    width: 200px;
-    border: 1px solid black;
-    text-align: center; /* 텍스트 가운데 정렬 */
-  }
+.title {
+  display: flex;
+  justify-content: center;
+}
 
-  .edit-button,
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table>thead {
+  background-color: #beb4f5;
+}
+
+.user-table {
+  border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+  width: 200px;
+  border: 1px solid black;
+  text-align: center;
+  /* 텍스트 가운데 정렬 */
+}
+
+.edit-button,
 .delete-button {
   width: 100px;
   background-color: #beb4f5;
