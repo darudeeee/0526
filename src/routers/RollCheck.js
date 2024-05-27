@@ -58,7 +58,7 @@ function RollCheck() {
             height: "100px",
           }}
         >
-          <Link to="/mainadmin">
+          <Link to="/mainuser">
             <ReplyIcon
               sx={{
                 fontSize: 40,
@@ -69,7 +69,7 @@ function RollCheck() {
               }}
             />
           </Link>
-          <Link to="/mainadmin">
+          <Link to="/mainuser">
             <HomeIcon
               sx={{
                 fontSize: 40,

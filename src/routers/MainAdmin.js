@@ -17,7 +17,7 @@ function MainAdmin() {
                 <Link to="/calendaradmin">캘린더</Link>
               </li>
               <li>
-                <Link to="/">자습실 결재</Link>
+                <Link to="/roomapproved">자습실 결재</Link>
               </li>
             </ol>
           </div>

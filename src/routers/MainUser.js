@@ -15,9 +15,10 @@ function Main() {
               </li>
               <li>
                 <Link to="/calendaruser">캘린더</Link>
+                
               </li>
               <li>
-                <Link to="/">자습실 예약</Link>
+                <Link to="/roomreservation">자습실 예약</Link>
               </li>
             </ol>
           </div>

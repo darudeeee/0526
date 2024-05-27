@@ -34,7 +34,7 @@ function RoomReservation() {
             height: "100px",
           }}
         >
-          <Link to="/mainadmin">
+          <Link to="/mainuser">
             <ReplyIcon
               sx={{
                 fontSize: 40,
@@ -45,7 +45,7 @@ function RoomReservation() {
               }}
             />
           </Link>
-          <Link to="/mainadmin">
+          <Link to="/mainuser">
             <HomeIcon
               sx={{
                 fontSize: 40,
