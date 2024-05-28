@@ -8,7 +8,7 @@ function RollCheck() {
   const [arrivalTime, setArrivalTime] = useState("");
   const [departureTime, setDepartureTime] = useState("");
   const [arrivalButtonDisabled, setArrivalButtonDisabled] = useState(false);
-  const [departureButtonDisabled, setDepartureButtonDisabled] = useState(false);
+  const [departureButtonDisabled, setDepartureButtonDisabled] = useState(true); // 처음에 비활성화 상태
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -21,6 +21,7 @@ function RollCheck() {
   const handleArrival = () => {
     setArrivalTime(currentTime);
     setArrivalButtonDisabled(true);
+    setDepartureButtonDisabled(false); // 등원 시 하원 버튼 활성화
     setTimeout(() => setArrivalButtonDisabled(false), 12 * 60 * 60 * 1000); // 12시간 후에 버튼 활성화
   };
 
@@ -41,13 +42,14 @@ function RollCheck() {
   }
 
   return (
-    <div 
-    style={{
-      width: "100vw",
-      height: "100vh",
-      display: "flex",
-      flexDirection: "column",
-    }}>
+    <div
+      style={{
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <div>
         <div
           style={{
